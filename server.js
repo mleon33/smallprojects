@@ -38,6 +38,9 @@ const server = http.createServer((req, res) => {
 
   // Check ext and set content type
   switch (extname) {
+    case ".html":
+      contentType = "text/html";
+      break;
     case ".js":
       contentType = "text/javascript";
       break;
@@ -53,10 +56,13 @@ const server = http.createServer((req, res) => {
     case ".jpg":
       contentType = "image/jpg";
       break;
+    default:
+      contentType = "text/html";
+      break;
   }
 
   // Check if contentType is text/html but no .html file extension
-  if (contentType == "text/html" && extname == "") filePath += ".html";
+  if (contentType === "text/html" && extname === "") filePath += ".html";
 
   // log the filePath
   console.log(filePath);
