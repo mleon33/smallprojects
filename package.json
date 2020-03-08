@@ -1,0 +1,21 @@
+{
+  "name": "test03.package.xagnsoftware.com",
+  "version": "1.0.0",
+  "description": "Package for my website",
+  "main": "app.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node nodemon"
+  },
+  "author": "Marco Antonio Garcia Leon",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "heroku": "^7.39.0",
+    "pg": "^7.18.2",
+    "uuid": "^7.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
